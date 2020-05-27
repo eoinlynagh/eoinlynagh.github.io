@@ -26,3 +26,24 @@
     margin-top:0px;
     margin-bottom:0px;
 }
+
+.contact-me{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footer {
+    position: fixed;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #e9ecef;
+    vertical-align: middle;
+}
+
+body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+ }
