@@ -1,0 +1,125 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <script src="./game.js"></script>
+    <link type="text/css" rel="stylesheet" href="./game.css" />
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="column-title">
+                    <h1>About Me!</h1>
+                </div>
+                <div>
+                    <ul>
+                        <li>Sitecore Certified</li>
+                        <li>Interned at TechGuilds Consulting, my responsibilities included</li>
+                        <ul>
+                            <li>Supporting the Sitecore Platform</li>
+                            <li>Supporting SQL Server via SSMS</li>
+                            <li>Deployments to Production Environments</li>
+                            <li>Managing Azure App Services, as well as supporting them</li>
+                            <li>Working with ASP.NET to develop working website components</li>
+                            <li>Environment Creation</li>
+                        </ul>
+                        <li>Web</li>
+                        <ul>
+                            <li>Experienced with .NET (MVC and Webforms)</li>
+                            <li>(Cs)Html, JavaScript, Css</li>
+                        </ul>
+                        <li>Other Tools</li>
+                        <ul>
+                            <li>Git</li>
+                            <li>Jira</li>
+                            <li>Hyper-V</li>
+                            <li>C#, Python, Javascript</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="column-title">
+                    <h1>Something else</h1>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="column-title">
+                    <h1>Play a Game</h1>
+                </div>
+                <div class="stage-section">
+                    <h2 id="stage-text">Press Submit</h2>
+                </div>
+                <div class="puzzle">
+                    <div>
+                        <a id="a1" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="a2" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="a3" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="a4" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="b1" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="b2" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="b3" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="b4" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="c1" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="c2" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="c3" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="c4" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="d1" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="d2" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="d3" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                        <a id="d4" type="button" class="btn btn-puzzle btn-lg btn-primary"></a>
+                    </div>
+                </div>
+                <br>
+                <div class="hint-text-section">
+                    <h2 id="hint-text">Goal</h2>
+                </div>
+                <div class="puzzle">
+                    <div>
+                        <a id="h-a1" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-a2" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-a3" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-a4" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="h-b1" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-b2" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-b3" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-b4" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="h-c1" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-c2" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-c3" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-c4" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                    </div>
+                    <div>
+                        <a id="h-d1" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-d2" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-d3" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                        <a id="h-d4" type="button" class="btn btn-hint btn-lg btn-primary"></a>
+                    </div>
+                </div>
+                <br>
+                <div class="submit-button">
+                    <a id="reset" class="btn btn-lg btn-primary">Restart</a>
+                    <a id="submit" class="btn btn-lg btn-primary">Submit</a>
+                </div>
+                <br>
+                <div class="submit-fail text-danger">
+                    <h5 id="fail-text" style="display:none">Please Try Again</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
