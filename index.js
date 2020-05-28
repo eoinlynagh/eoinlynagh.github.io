@@ -37,5 +37,5 @@ $(function () {
         reset(tracker);
     });
 
-    reset(tracker);
+    goToStage(tracker);
 });

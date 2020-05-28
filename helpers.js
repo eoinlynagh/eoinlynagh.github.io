@@ -1,7 +1,7 @@
 //other functions
 
 function goToStage(i) {
-    if (i > 0) {
+    if (i >= 0) {
         tracker = i;
         reset(i);
         updateHint(i)
