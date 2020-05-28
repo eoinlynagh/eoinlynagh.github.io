@@ -7,7 +7,7 @@ function reset(stage) {
     $('.btn-puzzle').each(function (index, element) {
         if (this.classList.contains('btn-danger')) {
             this.classList.remove('btn-danger');
-            this.classList.add('btn-primary');
+            this.classList.add('btn-outline-primary');
         }
         if (set.includes(this.id)) {
             alternater(this.id)
@@ -35,7 +35,7 @@ function updateHint(stage) {
     }
 
     $('.btn-hint').each(function (index, element) {
-        if ((this.classList.contains('btn-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
+        if ((this.classList.contains('btn-outline-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
             alternater(this.id)
         }
     });
@@ -47,7 +47,7 @@ function CheckButtons(stage) {
     var set = getSet(stage)
     $('.btn-puzzle').each(function (index, element) {
         if (flag) {
-            if ((this.classList.contains('btn-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
+            if ((this.classList.contains('btn-outline-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
                 flag = false;
             }
         }
@@ -58,9 +58,9 @@ function CheckButtons(stage) {
 //changes button colour when given id
 function alternater(id) {
     id = '#' + id;
-    if ($(id).hasClass('btn-primary')) {
-        $(id).addClass('btn-danger').removeClass('btn-primary');
+    if ($(id).hasClass('btn-outline-primary')) {
+        $(id).addClass('btn-danger').removeClass('btn-outline-primary');
     } else {
-        $(id).addClass('btn-primary').removeClass('btn-danger');
+        $(id).addClass('btn-outline-primary').removeClass('btn-danger');
     }
 }
