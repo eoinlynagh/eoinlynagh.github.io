@@ -36,4 +36,6 @@ $(function () {
     $('#reset').click(function () {
         reset(tracker);
     });
+
+    reset(tracker);
 });
