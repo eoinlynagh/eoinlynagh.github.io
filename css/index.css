@@ -1,5 +1,6 @@
 .column-title {
     text-align: center;
+    align-items: center;
 }
 
 .puzzle {
@@ -18,16 +19,16 @@
     text-align: center;
 }
 
-.submit-fail{
+.submit-fail {
     text-align: center;
 }
 
-.scrolling-top{
-    margin-top:0px;
-    margin-bottom:0px;
+.scrolling-top {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-.contact-me{
+.contact-me {
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -46,4 +47,20 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
- }
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 0px;
+}
+
+table {
+    /* cellspacing */
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}

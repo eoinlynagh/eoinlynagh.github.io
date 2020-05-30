@@ -1,13 +1,25 @@
 <head>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     <link type="text/css" rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <script src="./index.js"></script>
-    <script src="./gameLogic.js"></script>
-    <script src="./gameSettings.js"></script>
-    <script src="./helpers.js"></script>
-    <link type="text/css" rel="stylesheet" href="./index.css" />
+
+    <script src="./js/index.js"></script>
+    <script src="./js/gameLogic.js"></script>
+    <script src="./js/gameSettings.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/modal.js"></script>
+
+    <script src="https://use.fontawesome.com/bbfeb03fd3.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="./css/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
@@ -25,135 +37,227 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="column-title">
-                    <h1>Play a Game</h1>
-                </div>
-                <div class="stage-section">
-                    <h2 id="stage-text">Stage 0</h2>
-                </div>
-                <div class="puzzle">
-                    <div>
-                        <a id="a1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="a2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="a3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="a4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="b1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="b2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="b3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="b4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="c1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="c2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="c3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="c4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="d1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="d2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="d3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                        <a id="d4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
-                    </div>
-                </div>
-                <br>
-                <div class="hint-text-section">
-                    <h2 id="hint-text">Goal</h2>
-                </div>
-                <div class="puzzle">
-                    <div>
-                        <a id="h-a1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-a2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-a3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-a4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="h-b1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-b2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-b3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-b4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="h-c1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-c2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-c3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-c4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                    </div>
-                    <div>
-                        <a id="h-d1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-d2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-d3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                        <a id="h-d4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
-                    </div>
-                </div>
-                <br>
-                <div class="submit-button">
-                    <a id="reset" class="btn btn-lg btn-primary">Restart</a>
-                    <a id="submit" class="btn btn-lg btn-primary">Submit</a>
-                </div>
-                <br>
-                <div class="submit-fail text-danger">
-                    <h5 id="fail-text" style="display:none">Please Try Again</h2>
-                </div>
+            <div class="col-md-4 text-center align-items-center">
+                <table>
+                    <tr>
+                        <td style="color: white">uhoh</td>
+                    </tr>
+                    <tr>
+                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
+                                data-target="#modalGame" style="display:block">
+                                <h1>Game</h1>
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
+                                data-target="#modalExperience" style="display:block">
+                                <h1>Experience</h1>
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
+                                data-target="#modalExperience" style="display:block">
+                                <h1>Education</h1>
+                            </a></td>
+                    </tr>
+                    <tr>
+                        <td style="color:white">uhoh</td>
+                    </tr>
+                </table>
             </div>
-            <div class="col-md-4">
-                <div class="column-title">
-                    <h1>About Me!</h1>
+            <div class="col-md-8 text-center">
+                <div class="text-center">
+                    <h1>About Me</h1>
+                    <hr style="width:30%">
                 </div>
                 <div>
-                    <ul>
-                        <li>Sitecore Certified</li>
-                        <li>Interned at TechGuilds Consulting, my responsibilities included</li>
-                        <ul>
-                            <li>Supporting the Sitecore Platform</li>
-                            <li>Supporting SQL Server via SSMS</li>
-                            <li>Deployments to Production Environments</li>
-                            <li>Managing Azure App Services, as well as supporting them</li>
-                            <li>Working with ASP.NET to develop working website components</li>
-                            <li>Environment Creation</li>
-                        </ul>
-                        <li>Web</li>
-                        <ul>
-                            <li>Experienced with .NET (MVC and Webforms)</li>
-                            <li>(Cs)Html, JavaScript, Css</li>
-                        </ul>
-                        <li>Other Tools</li>
-                        <ul>
-                            <li>Git</li>
-                            <li>Jira</li>
-                            <li>Hyper-V</li>
-                            <li>C#, Python, Javascript</li>
-                        </ul>
-                    </ul>
+
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod interdum auctor. Nam dapibus
+                    quam non consequat semper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Cras sit amet egestas mi, et tempor leo. Suspendisse id neque nec ligula vehicula
+                    ornare. Aenean a nunc at lacus accumsan sodales eu non leo. Suspendisse elementum odio vitae nisl
+                    tempus, eget pellentesque tellus dignissim. Etiam lorem lacus, semper ut molestie sed, efficitur id
+                    massa.
+
+                    In et lectus blandit, scelerisque nisi ut, convallis diam. Vestibulum et sapien facilisis, fringilla
+                    dolor in, scelerisque velit. Nulla vestibulum dictum tristique. Sed eget sodales massa, sit amet
+                    volutpat risus. Donec malesuada justo eros, id fringilla lorem pretium ac. Morbi velit sapien,
+                    dapibus quis nisl vitae, consectetur rhoncus est. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit. Pellentesque sit amet accumsan ex. Nunc semper nisl vitae velit vestibulum, quis mattis metus
+                    scelerisque. Suspendisse ac dignissim erat.
+
+                    Nullam ullamcorper urna dictum mi fermentum, et varius tortor posuere. Mauris at tincidunt sapien.
+                    Praesent lobortis fringilla arcu, eget elementum erat ultrices ut. Phasellus sed purus bibendum,
+                    fringilla leo sed, pretium tellus. Vivamus et ex nec ligula maximus pulvinar ut non purus. Sed
+                    tincidunt nulla vitae erat eleifend rhoncus. Etiam a arcu sed lorem mollis vestibulum a ac sapien.
+                    Nulla facilisi. Praesent sed eros nec ipsum auctor varius. Sed eget velit ut ex elementum luctus.
+
+                    Pellentesque eleifend ultricies eleifend. Sed vehicula fermentum arcu sed sodales. Mauris feugiat
+                    quis mi ac pulvinar. Pellentesque neque orci, accumsan et viverra id, dignissim eget massa. Nullam
+                    pulvinar faucibus sem ultrices posuere. Morbi ullamcorper vulputate massa ut elementum. Vestibulum
+                    tincidunt vel tortor vel convallis.
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="column-title">
-                    <h1>Something else</h1>
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="footer fixed-bottom">
+            <div class="row contact-me">
+                <div class="col-md-4">
+                    <a href="https://www.linkedin.com/in/eoinlynagh/">
+                        <h5>linkedin</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="mailto:lynaghe@gmail.com">
+                        <h5>email</h5>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://github.com/eoinlynagh">
+                        <h5>github</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="modalExperience" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Experience</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <h2>Sitecore Certified</h2>
+                            <ul>
+                                <li>Supporting 4 Sitecore Instances</li>
+                                <li>Through understanding of the Sitecore Platform</li>
+                                <li>Additional training with headless and SXA</li>
+                            </ul>
+                            <h2><a href="https://www.techguilds.com">TechGuilds Consulting</a></h2>
+                            <h5>Responsibilities Included</h5>
+                            <ul>
+                                <li>Supporting SQL Server via SSMS</li>
+                                <li>Deployments, Azure Devops</li>
+                                <li>Managing Azure App Services</li>
+                                <li>ASP.NET Development</li>
+                                <li>Environment Creation</li>
+                                <li>Supporting the Sitecore CMS Platform</li>
+                            </ul>
+                            <h2>Web Experience</h2>
+                            <ul>
+                                <li>Experienced with .NET (MVC and Webforms)</li>
+                                <li>Html, JavaScript, Css</li>
+                                <li>Azure, Cloudflare, Openssl, IIS</li>
+                            </ul>
+                            <h2>Other Tools</h2>
+                            <ul>
+                                <li>Git, Gitkraken, Gitbash</li>
+                                <li>Jira, Conflunce, Agile Training</li>
+                                <li>C#, Python, Javascript</li>
+                                <li>Hyper-V</li>
+                            </ul>
+                            <h2>Dale Carniege Training</h2>
+                        </div>
+                        <hr>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer fixed-bottom">
-        <div class="row contact-me">
-            <div class="col-md-4">
-                <a href="https://www.linkedin.com/in/eoinlynagh/">
-                    <h5>linkedin</h5>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="mailto:lynaghe@gmail.com">
-                    <h5>email</h5>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="https://github.com/eoinlynagh">
-                    <h5>github</h5>
-                </a>
+
+    <div class="modal fade" id="modalGame" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Puzzle Game</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="stage-section">
+                        <h2 id="stage-text">Stage 0</h2>
+                    </div>
+                    <div class="puzzle">
+                        <div>
+                            <a id="a1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="a2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="a3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="a4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="b1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="b2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="b3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="b4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="c1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="c2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="c3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="c4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="d1" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="d2" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="d3" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                            <a id="d4" type="button" class="btn btn-puzzle btn-lg btn-outline-primary"></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="hint-text-section">
+                        <h2 id="hint-text">Goal</h2>
+                    </div>
+                    <div class="puzzle">
+                        <div>
+                            <a id="h-a1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-a2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-a3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-a4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="h-b1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-b2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-b3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-b4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="h-c1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-c2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-c3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-c4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                        </div>
+                        <div>
+                            <a id="h-d1" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-d2" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-d3" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                            <a id="h-d4" type="button" class="btn btn-hint btn-lg btn-outline-primary"></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="submit-button">
+                        <a id="reset" class="btn btn-lg btn-danger text-white">Restart</a>
+                        <a id="submit" class="btn btn-lg btn-success text-white">Next Level</a>
+                    </div>
+                    <br>
+                    <div class="submit-fail text-danger">
+                        <h5 id="fail-text" style="display:none">Please Try Again</h2>
+                    </div>
+                </div>
+                <hr>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 </body>
