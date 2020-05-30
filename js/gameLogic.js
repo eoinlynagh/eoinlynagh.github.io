@@ -64,3 +64,13 @@ function alternater(id) {
         $(id).addClass(color2).removeClass(color1);
     }
 }
+
+//method to determine what buttons change color
+function ButtonSwap(idSelector, stage) {
+    var matrix = createMatrix()
+    var position = getPosition(idSelector);
+    var IDs = getFourIDs(position, matrix);
+    IDs.forEach(function (item, index) {
+        alternater(item)
+    });
+}
