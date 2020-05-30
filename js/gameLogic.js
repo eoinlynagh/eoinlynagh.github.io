@@ -1,13 +1,15 @@
 //functions that can edit site elements directly
 
+var color1 = 'btn-success'
+var color2 = 'btn-outline-secondary'
 
 function reset(stage) {
     $('#fail-text').hide();
     set = getResetSet(stage);
     $('.btn-puzzle').each(function (index, element) {
-        if (this.classList.contains('btn-danger')) {
-            this.classList.remove('btn-danger');
-            this.classList.add('btn-outline-primary');
+        if (this.classList.contains(color1)) {
+            this.classList.remove(color1);
+            this.classList.add(color2);
         }
         if (set.includes(this.id)) {
             alternater(this.id)
@@ -35,7 +37,7 @@ function updateHint(stage) {
     }
 
     $('.btn-hint').each(function (index, element) {
-        if ((this.classList.contains('btn-outline-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
+        if ((this.classList.contains(color2) && set.includes(this.id)) || this.classList.contains(color1) && !set.includes(this.id)) {
             alternater(this.id)
         }
     });
@@ -47,7 +49,7 @@ function CheckButtons(stage) {
     var set = getSet(stage)
     $('.btn-puzzle').each(function (index, element) {
         if (flag) {
-            if ((this.classList.contains('btn-outline-primary') && set.includes(this.id)) || this.classList.contains('btn-danger') && !set.includes(this.id)) {
+            if ((this.classList.contains(color2) && set.includes(this.id)) || this.classList.contains(color1) && !set.includes(this.id)) {
                 flag = false;
             }
         }
@@ -58,9 +60,9 @@ function CheckButtons(stage) {
 //changes button colour when given id
 function alternater(id) {
     id = '#' + id;
-    if ($(id).hasClass('btn-outline-primary')) {
-        $(id).addClass('btn-danger').removeClass('btn-outline-primary');
+    if ($(id).hasClass(color2)) {
+        $(id).addClass(color1).removeClass(color2);
     } else {
-        $(id).addClass('btn-outline-primary').removeClass('btn-danger');
+        $(id).addClass(color2).removeClass(color1);
     }
 }

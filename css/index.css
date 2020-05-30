@@ -36,3 +36,15 @@ ul {
     padding-top:5px;
     padding-bottom: 5px;
 }
+
+.btn-puzzle{
+    height:34px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.btn-hint{
+    height:34px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
