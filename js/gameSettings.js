@@ -1,6 +1,10 @@
 //controls how the game acts during each stage
-
 //logic for what buttons change color when pressed
+
+var tracker = 1;
+var color1 = 'btn-success'
+var color2 = 'btn-outline-secondary'
+
 function ButtonSwap(idSelector, stage) {
     switch (stage) {
         case 0:

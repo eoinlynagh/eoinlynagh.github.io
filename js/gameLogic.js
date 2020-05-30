@@ -1,7 +1,5 @@
 //functions that can edit site elements directly
 
-var color1 = 'btn-success'
-var color2 = 'btn-outline-secondary'
 
 function reset(stage) {
     $('#fail-text').hide();

@@ -1,10 +1,19 @@
 //trigger functions for site elements
-var tracker = 1;
 $(function () {
     
     (function () {
         $('.footer').css('position', $(document).height() > $(window).height() ? "inherit" : "fixed");
     })();
+
+    $('.btn-puzzle').each(function(){
+        console.log(color1)
+        $(this).addClass(color1);
+    });
+
+    $('.btn-hint').each(function(){
+        console.log(color1)
+        $(this).addClass(color1);
+    });
     
     $('#fail-text')[0].attributes[1].value = ""
     $('#fail-text').hide();
