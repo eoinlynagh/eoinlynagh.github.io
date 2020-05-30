@@ -1,27 +1,3 @@
-.column-title {
-    text-align: center;
-}
-
-.puzzle {
-    text-align: center;
-}
-
-.submit-button {
-    text-align: center;
-}
-
-.stage-section {
-    text-align: center;
-}
-
-.hint-text-section {
-    text-align: center;
-}
-
-.submit-fail{
-    text-align: center;
-}
-
 .scrolling-top{
     margin-top:0px;
     margin-bottom:0px;
@@ -33,12 +9,12 @@
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     height: auto;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: #e9ecef;
+    background-color: #303030;
     vertical-align: middle;
 }
 
@@ -55,14 +31,3 @@ ul {
 ul {
     padding-left: 0px;
 }
-
-table {
-    /* cellspacing */
-    height: 100%;
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    table-layout: fixed;
-}
-
-tr{text-align: center;}

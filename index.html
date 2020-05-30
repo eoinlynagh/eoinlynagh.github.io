@@ -8,8 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <link type="text/css" rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <!-- <link type="text/css" rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" /> -->
 
     <script src="./js/index.js"></script>
     <script src="./js/gameLogic.js"></script>
@@ -17,14 +17,13 @@
     <script src="./js/helpers.js"></script>
     <script src="./js/modal.js"></script>
 
-    <script src="https://use.fontawesome.com/bbfeb03fd3.js"></script>
-
     <link type="text/css" rel="stylesheet" href="./css/index.css" />
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
-<body>
-    <div class="jumbotron text-center">
+<body class="text-center">
+    <div class="jumbotron ">
         <div id="welcome">
             <h1 id="mobile-message" style="display: none;">Welcome!</h1>
             <pre class="scrolling-top">██╗    ██╗ ███████╗ ██╗       ██████╗  ██████╗  ███╗   ███╗ ███████╗</pre>
@@ -37,36 +36,8 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 text-center align-items-center">
-                <table>
-                    <tr>
-                        <td style="color: white">uhoh</td>
-                    </tr>
-                    <tr>
-                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
-                                data-target="#modalGame" style="display:block">
-                                <h1>Game</h1>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
-                                data-target="#modalExperience" style="display:block">
-                                <h1>Experience</h1>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td><a type="button" class="btn btn-outline-primary" data-toggle="modal"
-                                data-target="#modalExperience" style="display:block">
-                                <h1>Education</h1>
-                            </a></td>
-                    </tr>
-                    <tr>
-                        <td style="color:white">uhoh</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-8 text-center">
-                <div class="text-center">
+            <div class="col-md-12">
+                <div>
                     <h1>About Me</h1>
                     <hr style="width:30%">
                 </div>
@@ -100,75 +71,99 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="row">
-
-        </div>
-        <div class="footer fixed-bottom">
-            <div class="row contact-me">
-                <div class="col-md-4">
-                    <a href="https://www.linkedin.com/in/eoinlynagh/">
-                        <h5>linkedin</h5>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="mailto:lynaghe@gmail.com">
-                        <h5>email</h5>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://github.com/eoinlynagh">
-                        <h5>github</h5>
-                    </a>
-                </div>
+            <div class="col-md-4  align-items-center">
+                <a type="button" class="btn btn-primary text-white" data-toggle="modal" data-target="#modalGame"
+                    style="display:block">
+                    <h1>Game</h1>
+                </a>
+            </div>
+            <div class="col-md-4  align-items-center">
+                <a type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalExperience"
+                    style="display:block">
+                    <h1>Experience</h1>
+                </a>
+            </div>
+            <div class="col-md-4 align-items-center">
+                <a type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalExperience"
+                    style="display:block">
+                    <h1>Education</h1>
+                </a>
             </div>
         </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
+    <div class="footer">
+        <div class="row contact-me">
+            <div class="col-md-4">
+                <a href="https://www.linkedin.com/in/eoinlynagh/">
+                    <h5>linkedin</h5>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="mailto:lynaghe@gmail.com">
+                    <h5>email</h5>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://github.com/eoinlynagh">
+                    <h5>github</h5>
+                </a>
+            </div>
+        </div>
+    </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="modalExperience" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">Experience</h1>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+    <!--Modals-->
+
+    <div class="modal fade" id="modalExperience" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Experience</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h2>Sitecore Certified</h2>
+                        <ul>
+                            <li>Supporting 4 Sitecore Instances</li>
+                            <li>Through understanding of the Sitecore Platform</li>
+                            <li>Additional training with headless and SXA</li>
+                        </ul>
+                        <h2><a href="https://www.techguilds.com">TechGuilds Consulting</a></h2>
+                        <h5>Responsibilities Included</h5>
+                        <ul>
+                            <li>Supporting SQL Server via SSMS</li>
+                            <li>Deployments, Azure Devops</li>
+                            <li>Managing Azure App Services</li>
+                            <li>ASP.NET Development</li>
+                            <li>Environment Creation</li>
+                            <li>Supporting the Sitecore CMS Platform</li>
+                        </ul>
+                        <h2>Web Experience</h2>
+                        <ul>
+                            <li>Experienced with .NET (MVC and Webforms)</li>
+                            <li>Html, JavaScript, Css</li>
+                            <li>Azure, Cloudflare, Openssl, IIS</li>
+                        </ul>
+                        <h2>Other Tools</h2>
+                        <ul>
+                            <li>Git, Gitkraken, Gitbash</li>
+                            <li>Jira, Conflunce, Agile Training</li>
+                            <li>C#, Python, Javascript</li>
+                            <li>Hyper-V</li>
+                        </ul>
+                        <h2>Dale Carniege Training</h2>
                     </div>
-                    <div class="modal-body">
-                        <div class="text-center">
-                            <h2>Sitecore Certified</h2>
-                            <ul>
-                                <li>Supporting 4 Sitecore Instances</li>
-                                <li>Through understanding of the Sitecore Platform</li>
-                                <li>Additional training with headless and SXA</li>
-                            </ul>
-                            <h2><a href="https://www.techguilds.com">TechGuilds Consulting</a></h2>
-                            <h5>Responsibilities Included</h5>
-                            <ul>
-                                <li>Supporting SQL Server via SSMS</li>
-                                <li>Deployments, Azure Devops</li>
-                                <li>Managing Azure App Services</li>
-                                <li>ASP.NET Development</li>
-                                <li>Environment Creation</li>
-                                <li>Supporting the Sitecore CMS Platform</li>
-                            </ul>
-                            <h2>Web Experience</h2>
-                            <ul>
-                                <li>Experienced with .NET (MVC and Webforms)</li>
-                                <li>Html, JavaScript, Css</li>
-                                <li>Azure, Cloudflare, Openssl, IIS</li>
-                            </ul>
-                            <h2>Other Tools</h2>
-                            <ul>
-                                <li>Git, Gitkraken, Gitbash</li>
-                                <li>Jira, Conflunce, Agile Training</li>
-                                <li>C#, Python, Javascript</li>
-                                <li>Hyper-V</li>
-                            </ul>
-                            <h2>Dale Carniege Training</h2>
-                        </div>
-                        <hr>
-                    </div>
+                    <hr>
                 </div>
             </div>
         </div>
@@ -185,7 +180,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="stage-section">
-                        <h2 id="stage-text">Stage 0</h2>
+                        <h2 id="stage-text">Stage 1</h2>
                     </div>
                     <div class="puzzle">
                         <div>
@@ -256,8 +251,6 @@
                 <hr>
             </div>
         </div>
-    </div>
-    </div>
     </div>
 
 </body>
