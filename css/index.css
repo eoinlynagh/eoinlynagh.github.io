@@ -1,5 +1,6 @@
 .column-title {
     text-align: center;
+    align-items: center;
 }
 
 .puzzle {
@@ -47,3 +48,30 @@ body {
     margin-bottom: 100px;
     clear: both;
  }
+
+ ul {
+    list-style-type: none;
+  }
+
+  ul{padding-left: 0px;}
+
+  table {
+    /* cellspacing */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    /* This covers the th elements */
+}
+tr {
+    /* This covers the tr elements */
+}
+th, td {
+    /* cellpadding */
+    padding: 0;
+}
+
+table {
+    table-layout: fixed;
+
+}
