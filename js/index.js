@@ -1,7 +1,4 @@
 //trigger functions for site elements
-
-
-
 var tracker = 0;
 $(function () {
 
