@@ -24,15 +24,11 @@ function updateHint(stage) {
 
     if (originalSet.length < 2) {
         $('#stage-text').text("Final Level");
-        originalSet.forEach(function (item, index) {
-            set.push('h-' + item)
-        });
-    } else {
-        originalSet.forEach(function (item, index) {
-            set.push('h-' + item)
-        });
-
     }
+
+    originalSet.forEach(function (item, index) {
+        set.push('h-' + item)
+    });
 
     $('.btn-hint').each(function (index, element) {
         if ((this.classList.contains(color2) && set.includes(this.id)) || this.classList.contains(color1) && !set.includes(this.id)) {
